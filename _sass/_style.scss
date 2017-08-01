@@ -1,0 +1,96 @@
+
+.container {
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    box-shadow: 0 0 2px #ccc;
+    display: flex;
+      border: 8px solid #e7e7e7;
+}
+
+.inline {
+    display: inline-block;
+    width: 50%;
+    @include media-query($on-palm) {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+.form {
+  padding: 20px;
+  margin: 1em auto;
+  background: #fff;
+  perspective: 1200;
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  transition: all 300ms linear;
+  &:hover {
+    border-color: darken(#e7e7e7, 3%);
+  }
+}
+
+
+label {
+  display: block;
+  user-select: none;
+  line-height: 1.8;
+    margin-top: 10px;
+  font-weight: 300;
+  transition: padding-left 200ms ease-in;
+
+}
+
+input {
+  margin-right: .5em;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit])  {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  transition: all .3s;
+  border-bottom: 1px solid #bebed2;
+    &:focus {
+      border-bottom: 2px solid #78788c;
+    }
+}
+
+input[type=radio] {
+      padding: 5px;
+}
+
+
+p {
+    line-height: 1.6;
+}
+
+.button {
+  padding: 8px 20px;
+  margin: 8px 0 0;
+  border: 2px solid #78788c;
+  background: 0;
+  color: #5a5a6e;
+  cursor: pointer;
+  transition: all .3s;
+}
+.button:hover {
+  background: #78788c;
+  color: #fff;
+}
+    
+.image {
+  
+    img {
+        padding-top: 25%;
+        height: auto;
+        max-width: 100%;
+    }
+}
