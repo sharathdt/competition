@@ -1,12 +1,19 @@
-
+body {
+    overflow-x: hidden;
+}
 .container {
     width: 80%;
+    overflow: hidden;
     padding: 20px;
     margin: 0 auto;
     font-family: sans-serif;
     box-shadow: 0 0 2px #ccc;
     display: flex;
-      border: 8px solid #e7e7e7;
+    border: 8px solid #e7e7e7;
+    @include media-query($on-palm) {
+        display: block;
+        border: none;
+    }
 }
 
 .inline {
